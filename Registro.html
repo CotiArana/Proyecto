@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Iniciar Sesión</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+        <link rel="stylesheet" href="assets/css/iconfont.css">
+        <link rel="stylesheet" href="assets/css/slick/slick.css">
+        <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <style type="text/css">
+        	.black{
+        		background.color: black;
+        	}
+        	.orange{
+        		background-color: orange;
+        		
+        	}
+        	p {
+        		color: orange;
+        	}
+        	#mediano{
+        		font-size: 25px;
+        	}
+        	#pequeño{
+        		font-size: 20px;
+        	}
+            #diminuto{
+                font-size: 10px;
+            }
+        </style>
+      <!-- <script language="JavaScript" type="text/JavaScript">
+    function verif(formu)
+{   if (f1.password1.value==f1.password2.value) 
+{ alert('las contraseñas coinciden'); return true }
+    else 
+{ alert('las dos contraseñas no son iguales'); return false }
+}
+}
+</script>-->
+    </head>
+    <body data-spy="scroll" data-target=".navbar-collapse">
+<div class="culmn">
+            <header id="main_menu" class="header navbar-fixed-top black">            
+                <div class="black">
+                    <div class="container">
+                        <div class="row">
+                            <div class="nave_menu">
+                                <nav class="navbar black">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="#home">
+                                            </a>
+                                        </div>
+                                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                            <ul class="nav navbar-nav navbar-right">
+                                            	<li><a href="Main.html"><p id="pequeño">Inicio</p></a></li>
+                                                <li><a href="Inicio.html"><p id="pequeño">Iniciar Sesion</p></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>	
+                        </div>
+                    </div>
+                </div>
+            </header> 
+
+<section id="home" class="black">
+                <div class="overlay">
+                    <div class="home_skew_border">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 ">
+                                    <div class="main_home_slider text-center">
+                                        <div class="single_home_slider">
+                                            <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                                <h1>Registrarse</h1>
+                                                <div class="separator"></div>
+                                                <form name="f1" action="">    	                                                
+                                                        <p id="mediano">Nombre</p>
+    	                                                <input class="input-sm" required="required" type="text" name="nombre">
+    	                                                <br><br>
+    	                                                <p id="mediano">Apellido</p>
+    	                                                <input class="input-sm" required="required" type="text" name="apellido">
+                                                        <br><br>
+                                                        <p id="mediano">Constraseña</p>
+                                                        <p id="pequeño">(Minimo 8  caracteres, una mayuscula y un numero)</p>
+                                                        <input class="input-sm" required="required" type="password" name="password1" >
+                                                        <br><br>
+                                                        <p id="mediano">Repetir contraseña</p>
+                                                        <input clas!s="input-sm" required="required" type="password" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                                        <br><br>
+                                                        <form>
+                                                            <div class="emailBox">
+                                                                <p id="mediano" for="emailAddress">Email</p><br>
+                                                                <input id="emailAddress" type="email" size="20" maxLength="64" required placeholder="username@elobraje.com" 
+                                                                pattern=".+@elobraje.com" title="Sólo puedes utilizar un mail con el dominio de El Obraje">
+                                                            </div>
+                                                        <div class="home_btn">
+                                                            <input type="submit" name="aceptar" class="btn btn-lg m-t-10" value="Registrarse"><!--onclick='return(verif(this.form))'-->
+                                                            <center id="errors">
+                                                        </div>
+                                                        </form>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -7,10 +7,11 @@
 <?php 
 	include("conexion.php");
 
-	$registros = mysqli_query($Conexion,"SELECT * from asistencia") or die("Problemas en el select:".mysqli_error($Conexion));
+	$registros = mysqli_query($Conexion,"SELECT id_alumno, tipo, dia, hora from asistencia ") or die("Problemas en el select:".mysqli_error($Conexion));
 ?>
 
-<h1 class="text-center" >Inasistencias del alumno <?php echo "$_REQUEST[alumno]"; ?> </h1>
+<h1 class="text-center" >Inasistencias del alumno <?php echo "$_REQUEST[alumno]"; ?> </h1>	
+
 <table border="1px" class="table table-condensed">
 	<tr>
 	     <th>ID</th>
@@ -19,8 +20,9 @@
 	     <th>Dia</th>
 	</tr>
 	
-	<?php
 
+	
+	<?php
 			while($reg=mysqli_fetch_array($registros))
 			{
 				echo "<tr>";
@@ -30,12 +32,13 @@
 					echo "<td>" .$reg['dia']."</td>";
 				echo "</tr>";
 			}
-			
-		?>
 		
-
-		  	
+		
+	?>		  	
 </table>
+
+	<a href="buscar.php">Volver</a></li>
+
 
 </body>
 </html>

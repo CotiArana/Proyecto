@@ -63,9 +63,13 @@
 		    </select>
 		</div>
 	 
-			<input class="btn btn-primary btn-block" type="submit" value="Enviar Consulta">
+			<input class="btn btn-primary btn-block" type="submit" value="Buscar">
 
 	        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	</form>
+		<br>
+	<form action="registro.php" method="GET">
+			<input class="btn btn-primary btn-block" type="submit" value="Registro Total">
 	</form>
    </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2018 a las 15:21:39
+-- Tiempo de generación: 22-06-2018 a las 16:39:27
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -107,15 +107,19 @@ CREATE TABLE `asistencia` (
   `id_alumno` int(11) NOT NULL,
   `tipo` varchar(30) NOT NULL,
   `dia` date NOT NULL,
-  `hora` time NOT NULL
+  `hora` time NOT NULL,
+  `total` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `asistencia`
 --
 
-INSERT INTO `asistencia` (`id`, `id_alumno`, `tipo`, `dia`, `hora`) VALUES
-(1, 17, 'Falta', '2018-06-19', '08:00:00');
+INSERT INTO `asistencia` (`id`, `id_alumno`, `tipo`, `dia`, `hora`, `total`) VALUES
+(1, 17, 'Falta', '2018-06-19', '08:00:00', 1),
+(2, 17, 'Falta', '2018-06-22', '09:00:00', 1),
+(4, 17, 'FALTA', '2018-06-21', '05:55:39', 1),
+(5, 15, 'FALTA', '2018-06-21', '05:57:48', 1);
 
 -- --------------------------------------------------------
 
@@ -191,7 +195,7 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `asistencia`
 --
 ALTER TABLE `asistencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `cursos`

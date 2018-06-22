@@ -23,7 +23,7 @@
 	$tamaño = 10; //Tamaño de Pixel
 	$level = 'L'; //Precisión Baja
 	$framSize = 3; //Tamaño en blanco
-	$contenido = "http://192.168.1.104/proyecto/presenteM.php?id_alumno=$id";//date("d-m-Y (H:i:s)", (strtotime ("-5 Hours")))
+	$contenido = "http://192.168.1.104/proyecto/presenteM.php?id_ alumno=$id";//date("d-m-Y (H:i:s)", (strtotime ("-5 Hours")))
 	//$contenidoid = $id;
 	
     //Enviamos los parametros a la Función para generar código QR 

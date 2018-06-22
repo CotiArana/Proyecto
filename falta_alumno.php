@@ -37,7 +37,7 @@
 	?>		  	
 </table>
 
-	<a href="buscar.php">Volver</a></li>
+	<a href="buscar1.php">Volver</a></li>
 
 
 </body>

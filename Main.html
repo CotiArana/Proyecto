@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-   <?php
-      include 'conexion.php';
-    ?>
-     <html class="no-js" lang=""> <!--<![endif]-->
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -54,32 +53,8 @@
         	}
         </style>
     </head>
-    <body>
-        <!--  Este script se lanza cada vez que se selecciona una opción en la lista de países y se encarga de enviar el id del 
-              país al archivo get_ciudad.php (Archivo 3), este archivo que lo veremos después se encargará de generar una nueva 
-              lista de ciudades dependiendo del id seleccionado de país, una vez creada la lista se sustituirá sobre la lista 
-              actual de nuestro archivo index  -->
-	
-    <form action="falta_alumno.php" method="GET">
-		<script>
-		     function obtenerAlumnos(val) 
-		     {
-			$.ajax
-			({
-			    type: "GET",
-			    url: "get_alumno.php",
-			    data:'id_curso='+val,
-			    success: function(data)
-			    {
-				$("#lista_alumnos").html(data);
-			    });
-			}
-		</script>
-
-		<?php
-		    $consulta_cursos   = $Conexion->query("SELECT id as 'valor', descripcion as 'descripcion' from cursos order by descripcion");
-		    $consulta_alumnos  = $Conexion->query("SELECT id as 'valor', descripcion as 'descripcion' from alumnos order by descripcion");
-		?><section id="home" class="black">
+            <!--home Section -->
+            <section id="home" class="black">
                 <div class="overlay">
                     <div class="home_skew_border">
                         <div class="container">
@@ -88,47 +63,14 @@
                                     <div class="main_home_slider text-center">
                                         <div class="single_home_slider">
                                             <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                                <!--<h3>Bienvenido a</h3>
+                                                <h3>Bienvenido a</h3>
                                                 <h1>PHOTOASSIST</h1>
                                                 <div class="separator"></div>
                                                 <p id="mediano">Desea...</p>
                                                 <div class="home_btn">
                                                     <a href="Prof_Alu.html" class="btn btn-lg m_t_10">Registrarse</a>
                                                     <a href="Inicio.html" class="btn btn-lg m_t_10">Iniciar sesion</a>
-                                                </div>-->
-
-		<!--<div class="form-group col-md-3">-->
-		    <p id="mediano">Cursos:</p>
-		    <select name="curso" class="form-control"  style="width:200px" id="lista_cursos" onChange="obtenerAlumnos(this.value);">
-			<option value=''>Seleccionar Curso</option>
-			<?php		
-			    while($row= $consulta_cursos->fetch_object())
-			    {
-				echo "<option value='".$row->valor."'>".$row->descripcion."</option>";
-			    }
-			?>
-	            </select><br><br>
-	        <!--</div>-->
-	       <!--<div class="form-group col-md-6">-->
-		    <p id="mediano">Alumno:</p>					
-		    <select name="alumno" id="lista_alumnos"  style="width:200px" class="selectpicker" data-live-search="true">
-			<option value=''>Seleccionar Alumno</option>
-			<?php
-			      while($row= $consulta_alumnos->fetch_object())
-			      {
-				   echo "<option value='".$row->valor."'>".$row->descripcion."</option>";
-			      }
-			?>
-		    </select><br><br>
-		<!--</div>-->
-		<input class="btn btn-lg m_t_10" type="submit" value="Buscar">
-
-	        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	</form>
-		<br>
-	<form action="registro.php" method="GET">
-			<input class="btn btn-lg m_t_10" type="submit" value="Registro Total">
-	</form>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -139,9 +81,3 @@
                             </div>
                         </div>
             </section>
-	 
-		
-	 
-			
-   </body>
-</html>

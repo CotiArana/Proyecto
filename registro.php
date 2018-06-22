@@ -4,11 +4,10 @@
 	<title>Inasistencia</title>
 </head>
 <body>
-	
 <?php 
 	include("conexion.php");
 
-	$registros = mysqli_query($Conexion,"SELECT a.id_alumno, b.descripcion, sum(total) as total  from asistencia a, alumnos b WHERE a.id_alumno = b.id group by a.id_alumno") 
+	$registros = mysqli_query($Conexion,"SELECT id_alumno, sum(total) as total from asistencia group by id_alumno") 
 	or die("Problemas en el select:".mysqli_error($Conexion));
 
 ?>
@@ -27,7 +26,7 @@
 			while($reg=mysqli_fetch_array($registros))
 			{
 				echo "<tr>";
-					echo "<td>" .$reg['descripcion']."</td>";   //"<?php echo $reg['Apellido'];
+					echo "<td>" .$reg['id_alumno']."</td>";   //"<?php echo $reg['Apellido'];
 					echo "<td>" .$reg['total']."</td>";
 				echo "</tr>";
 			}

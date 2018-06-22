@@ -2,27 +2,9 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Iniciar Sesión</title>
+<title>Registrarse</title>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
+	
 	<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -100,21 +82,30 @@
                                             <a class="navbar-brand" href="#home">
                                             </a>
                                         </div>
+
+                                     		
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                                             <ul class="nav navbar-nav navbar-right">
                                             	<li><a href="Main.html"><p id="pequeño">Inicio</p></a></li>
                                                 <li><a href="Inicio.html"><p id="pequeño">Iniciar Sesion</p></a></li>
+                                            
                                             </ul>
+
+
                                         </div>
+
                                     </div>
                                 </nav>
                             </div>	
                         </div>
+
                     </div>
+
                 </div>
             </header> 
-
-<section id="home" class="black">
+	
+	<section id="home" class="black">
                 <div class="overlay">
                     <div class="home_skew_border">
                         <div class="container">
@@ -132,25 +123,20 @@
     	                                                <p id="mediano">Apellido</p>
     	                                                <input class="input-sm" required="required" type="text" name="apellido">
                                                         <br><br>
-                                                        <p id="mediano">Constraseña</p>
-                                                        <p id="pequeño">(Minimo 8  caracteres, una mayuscula y un numero)</p>
-                                                        <input class="input-sm" required="required" type="password" name="password1" >
+                                                        <p id="mediano">Constraseña (Minimo 8  caracteres, una mayuscula y un numero)</p>
+                                                        <input class="input-sm" required="required" type="password" name="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                                         <br><br>
                                                         <p id="mediano">Repetir contraseña</p>
-                                                        <input clas!s="input-sm" required="required" type="password" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                                        <input class="input-sm" required="required" type="password" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                                         <br><br>
-                                                        <form>
-                                                            <div class="emailBox">
-                                                                <p id="mediano" for="emailAddress">Email</p><br>
-                                                                <input id="emailAddress" type="email" size="20" maxLength="64" required placeholder="username@elobraje.com" 
-                                                                pattern=".+@elobraje.com" title="Sólo puedes utilizar un mail con el dominio de El Obraje">
-                                                            </div>
+                                                        <p id="mediano">E-mail</p>
+                                                        <input class="input-sm" required="required" type="email" name="email">
                                                         <div class="home_btn">
                                                             <input type="submit" name="aceptar" class="btn btn-lg m-t-10" value="Registrarse"><!--onclick='return(verif(this.form))'-->
-                                                            <center id="errors">
                                                         </div>
-                                                        </form>
-                                                </form>
+                                                    </form>
+                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -161,6 +147,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>		
 </body>
 </html>
